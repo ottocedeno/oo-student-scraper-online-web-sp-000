@@ -9,7 +9,7 @@ class Scraper
     #Array of all students on the page
     students = doc.css(".student-card")
     students.map do |student|
-      hash = {
+      student_hash = {
         name: student.css("h4.student-name").text,
         location: student.css("p.student-location").text,
         profile_url: student.css("a").attribute("href").value
